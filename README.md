@@ -16,6 +16,7 @@
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 > [!NOTE]
-> Esse repositório é em base do repositório do professor Gerson. 
-[Repositório Original](https://github.com/gerson-pn/atvi-pl-typescript)
+> [Repositório Original](https://github.com/gerson-pn/atvi-pl-typescript) do professor Gerson.
 
+## Como rodar o projeto
+??
