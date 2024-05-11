@@ -15,8 +15,16 @@
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-> [!NOTE]
-> [Repositório Original](https://github.com/gerson-pn/atvi-pl-typescript) do professor Gerson.
 
 ## Como rodar o projeto
-??
+Se não possuir TypeScript na sua máquina, utilize o comando `npm install -g typescript`
+
+Ao baixar o projeto e abrir no Visual Studio Code, abra o terminal e utilize o comando `cd projeto`
+
+Utilize o comando `npm install prompt-sync` e `tsc` ou `tsc --init`
+
+Após isso, utilize o comando `node .\out\app\main.js` e teste o projeto 😎
+
+
+> [!NOTE]
+> [Repositório Original](https://github.com/gerson-pn/atvi-pl-typescript) do professor Gerson.
