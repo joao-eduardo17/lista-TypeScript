@@ -15,13 +15,15 @@ export default class Cliente {
     private produtosConsumidos: Array<Produto>
     private servicosConsumidos: Array<Servico>
     private pets: Array<Pet>
-    constructor(nome: string, nomeSocial: string, cpf: CPF) {
+    constructor(nome: string, nomeSocial: string, cpf: CPF, rg: RG, telefone: Telefone) {
         this.nome = nome
         this.nomeSocial = nomeSocial
         this.cpf = cpf
         this.rgs = []
+        this.rgs.push(rg)
         this.dataCadastro = new Date()
         this.telefones = []
+        this.telefones.push(telefone)
         this.produtosConsumidos = []
         this.servicosConsumidos = []
         this.pets = []
@@ -29,14 +31,22 @@ export default class Cliente {
     public get getCpf(): CPF {
         return this.cpf
     }
-    public get getRgs(): Array<RG> {
-        return this.rgs
+    public get getRgs(): Array<string> {
+        let lista: string[] = []
+        this.rgs.forEach(rg => {
+            lista.push(rg.getValor)
+        })
+        return lista
     }
     public get getDataCadastro(): Date {
         return this.dataCadastro
     }
-    public get getTelefones(): Array<Telefone> {
-        return this.telefones
+    public get getTelefones(): Array<string> {
+        let lista: string[] = []
+        this.telefones.forEach(telefone => {
+            lista.push(telefone.getTelefone)
+        })
+        return lista
     }
     public get getProdutosConsumidos(): Array<Produto> {
         return this.produtosConsumidos

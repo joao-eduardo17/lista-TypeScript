@@ -1,6 +1,8 @@
 import Entrada from "../io/entrada"
 import Cliente from "../modelo/cliente"
 import CPF from "../modelo/cpf"
+import RG from "../modelo/rg"
+import Telefone from "../modelo/telefone"
 import Cadastro from "./cadastro"
 
 export default class CadastroCliente extends Cadastro {
@@ -23,7 +25,19 @@ export default class CadastroCliente extends Cadastro {
         let dia = new Number(partesData[0].valueOf()).valueOf()
         let dataEmissao = new Date(ano, mes, dia)
         let cpf = new CPF(valor, dataEmissao);
-        let cliente = new Cliente(nome, nomeSocial, cpf);
+        valor = this.entrada.receberTexto(`Por favor informe o número do RG: `)
+        data =  this.entrada.receberTexto(`Por favor informe a data de emissão do cpf, no padrão dd/mm/yyyy: `)
+        partesData = data.split('/')
+        ano = new Number(partesData[2].valueOf()).valueOf()
+        mes = new Number(partesData[1].valueOf()).valueOf()
+        dia = new Number(partesData[0].valueOf()).valueOf()
+        dataEmissao = new Date(ano, mes, dia)
+        let rg = new RG(valor, dataEmissao)
+        let numero = this.entrada.receberTexto(`Por favor informe o seu número de telefone no modelo 12987654321: `)
+        let ddd = numero.slice(0,2)
+        numero = numero.slice(2)
+        let telefone = new Telefone(ddd, numero)
+        let cliente = new Cliente(nome, nomeSocial, cpf, rg, telefone);
         this.clientes.push(cliente)
         console.log(`\nCadastro concluído :)\n`);
     }
