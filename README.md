@@ -1,7 +1,7 @@
 # Lista I
 
 ## Objetivo
-- [ ] CRUD (Create, Read, Update e Delete) de clientes e seus respectivos Pets
+- [X] CRUD (Create, Read, Update e Delete) de clientes e seus respectivos Pets
 - [ ] CRUD de produtos e serviços
 - [ ] Registro de consumo dos produtos ou serviços que cada cliente adquiriu
 - [ ] Listagem dos 10 clientes que mais consumiram produtos ou serviços, em quantidade, não em valor
