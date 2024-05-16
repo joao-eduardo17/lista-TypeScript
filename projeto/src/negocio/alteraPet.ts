@@ -6,11 +6,13 @@ import Altera from "./altera";
 export default class AlteraPet extends Altera {
     private clientes: Array<Cliente>
     private entrada: Entrada
+
     constructor(clientes: Array<Cliente>) {
         super()
         this.clientes = clientes
         this.entrada = new Entrada()
     }
+    
     public alterar(): void {
         let altera = false
         let cpf = this.entrada.receberTexto(`Digite o número do CPF do cliente: `)

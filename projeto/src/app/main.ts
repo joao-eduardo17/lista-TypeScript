@@ -7,7 +7,7 @@ import CadastroPet from "../negocio/cadastroPet";
 import DeletaCliente from "../negocio/deletaCliente";
 import DeletaPet from "../negocio/deletaPet";
 import ListagemClientes from "../negocio/listagemClientes";
-import ListagemPet from "../negocio/listagemPet";
+import ListagemPets from "../negocio/listagemPets";
 
 console.log(`Bem-vindo ao melhor sistema de gerenciamento de pet shops e clínicas veterinarias`)
 let empresa = new Empresa()
@@ -61,7 +61,7 @@ while (execucao) {
                     cadastroPet.cadastrar()
                     break;
                 case 2:
-                    let listaPet = new ListagemPet(empresa.getClientes)
+                    let listaPet = new ListagemPets(empresa.getClientes)
                     listaPet.listar()
                     break;
                 case 3:

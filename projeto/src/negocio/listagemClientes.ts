@@ -3,10 +3,12 @@ import Listagem from "./listagem";
 
 export default class ListagemClientes extends Listagem {
     private clientes: Array<Cliente>
+    
     constructor(clientes: Array<Cliente>) {
         super()
         this.clientes = clientes
     }
+    
     public listar(): void {
         console.log(`\nLista de todos os clientes:`);
         this.clientes.forEach(cliente => {

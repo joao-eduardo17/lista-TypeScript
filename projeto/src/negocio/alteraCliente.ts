@@ -8,6 +8,7 @@ import Altera from "./altera";
 export default class AlteraCliente extends Altera {
     private clientes: Array<Cliente>
     private entrada: Entrada
+    
     constructor(clientes: Array<Cliente>) {
         super()
         this.clientes = clientes
