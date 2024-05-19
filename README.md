@@ -2,7 +2,7 @@
 
 ## Objetivo
 - [X] CRUD (Create, Read, Update e Delete) de clientes e seus respectivos Pets
-- [ ] CRUD de produtos e serviços
+- [X] CRUD de produtos e serviços
 - [ ] Registro de consumo dos produtos ou serviços que cada cliente adquiriu
 - [ ] Listagem dos 10 clientes que mais consumiram produtos ou serviços, em quantidade, não em valor
 - [ ] Listagem geral dos serviços ou produtos mais consumidos
@@ -21,7 +21,7 @@ Se não possuir TypeScript na sua máquina, utilize o comando `npm install -g ty
 
 Ao baixar o projeto e abrir no Visual Studio Code, abra o terminal e utilize o comando `cd projeto`
 
-Utilize o comando `npm install prompt-sync` e `tsc` ou `tsc --init`
+Utilize o comando `npm install prompt-sync` e `tsc`
 
 Após isso, utilize o comando `node .\out\app\main.js` e teste o projeto 😎
 
