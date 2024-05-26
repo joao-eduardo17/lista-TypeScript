@@ -10,7 +10,8 @@ export default class ListagemPets extends Listagem {
     }
     
     public listar(): void {
-        console.log(`\nInício da listagem de pets:`)
+        console.log(`\n------------------------------`)
+        console.log(`Listagem de todos os pets:`)
         this.clientes.forEach(cliente => {
             if (cliente.getPets.length > 0){
                 cliente.getPets.forEach(pet => {
@@ -22,5 +23,6 @@ export default class ListagemPets extends Listagem {
                 })
             }
         })
+        console.log(`\n`)
     }
 }

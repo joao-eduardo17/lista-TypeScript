@@ -1,6 +1,5 @@
 import Entrada from "../io/entrada";
 import Cliente from "../modelo/cliente";
-import Pet from "../modelo/pet";
 import RG from "../modelo/rg";
 import Telefone from "../modelo/telefone";
 import Altera from "./altera";
@@ -17,6 +16,7 @@ export default class AlteraCliente extends Altera {
 
     public alterar(): void {
         let altera = false
+        console.log(`\n------------------------------`)
         let cpf = this.entrada.receberTexto(`Digite o CPF do cliente que deseja alterar: `)
         this.clientes.forEach((cliente, index) => {
             if (cliente.getCpf.getValor === cpf) {
@@ -42,12 +42,13 @@ export default class AlteraCliente extends Altera {
                 for(let c = 0; c < pets.length; c++) {
                     newCliente.getPets.push(pets[c])
                 }
-                console.log(`Cliente alterado com sucesso\n`)
+                console.log(`\nCliente alterado com sucesso`)
                 altera = true
             }
         })
         if (!altera) {
-            console.log(`CPF não encontrado\n`)
+            console.log(`\nCPF não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

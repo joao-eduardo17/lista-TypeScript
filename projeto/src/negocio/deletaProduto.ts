@@ -14,16 +14,18 @@ export default class DeletaProduto extends Deleta {
 
     public deletar(): void {
         let remove = false
+        console.log(`\n------------------------------`)
         let id = this.entrada.receberNumero(`Digite o ID do produto que deseja apagar: `)
         this.produtos.forEach((produto, index,) => {
             if(produto.id === id) {
                 this.produtos.splice(index, 1)
-                console.log(`Produto deletado com sucesso\n`)
+                console.log(`\nProduto deletado com sucesso`)
                 remove = true
             }
         })
         if(!remove) {
-            console.log(`ID não encontrado\n`)
+            console.log(`\nID não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

@@ -14,6 +14,7 @@ export default class AlteraServico extends Altera {
 
     public alterar(): void {
         let altera = false
+        console.log(`\n------------------------------`)
         let id = this.entrada.receberNumero(`Digite o ID do serviço que deseja alterar: `)
         this.servicos.forEach((servico, index) => {
             if(servico.id === id) {
@@ -21,11 +22,13 @@ export default class AlteraServico extends Altera {
                 let preco = this.entrada.receberNumero(`Digite o novo preço do produto: `)
                 let newServico = new Servico(id, nome, preco)
                 this.servicos.splice(index, 1, newServico)
-                console.log(`Serviço alterado com sucesso\n`)
+                console.log(`\nServiço alterado com sucesso`)
+                altera = true
             }
         })
         if(!altera) {
-            console.log(`ID não encontrado\n`)
+            console.log(`\nID não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

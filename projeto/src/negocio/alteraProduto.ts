@@ -14,17 +14,20 @@ export default class AlteraProduto extends Altera {
 
     public alterar(): void {
         let altera = false
+        console.log(`\n------------------------------`)
         let id = this.entrada.receberNumero(`Digite o ID do produto que deseja alterar: `)
         this.produtos.forEach((produto, index) => {
             if(produto.id === id) {
                 let nome = this.entrada.receberTexto(`Digite o novo nome do produto: `)
-                let newProduto = new Produto(id, nome)
+                let preco = this.entrada.receberNumero(`Digite o novo preço do produto: `)
+                let newProduto = new Produto(id, nome, preco)
                 this.produtos.splice(index, 1, newProduto)
-                console.log(`Produto alterado com sucesso\n`)
+                console.log(`\nProduto alterado com sucesso`)
             }
         })
         if(!altera) {
-            console.log(`ID não encontrado\n`)
+            console.log(`\nID não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

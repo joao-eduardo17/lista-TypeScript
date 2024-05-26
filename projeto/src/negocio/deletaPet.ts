@@ -14,6 +14,7 @@ export default class DeletaPet extends Deleta {
     
     public deletar(): void {
         let remove = false
+        console.log(`\n------------------------------`)
         let cpf = this.entrada.receberTexto(`\nInsira o número do CPF do cliente: `)
         this.clientes.forEach(cliente => {
             if(cliente.getCpf.getValor === cpf) {
@@ -21,14 +22,15 @@ export default class DeletaPet extends Deleta {
                 cliente.getPets.forEach((pet, index) => {
                     if(pet.getNome.toLowerCase() === petNome) {
                         cliente.getPets.splice(index, 1)
-                        console.log(`Pet deletado\n`)
+                        console.log(`\nPet deletado`)
                         remove = true
                     }
                 })
             }
         })
         if(!remove) {
-            console.log(`CPF ou nome não encontrado\n`)
+            console.log(`\nCPF ou nome não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

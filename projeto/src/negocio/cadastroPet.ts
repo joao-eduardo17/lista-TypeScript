@@ -14,6 +14,7 @@ export default class CadastroPet extends Cadastro {
     }
     
     public cadastrar(): void {
+        console.log(`\n------------------------------`)
         console.log(`Início do cadastro de Pet\n`)
         let atribui = false
         let cpf = this.entrada.receberTexto(`Digite o CPF do cliente que vai receber o Pet: `)
@@ -25,12 +26,13 @@ export default class CadastroPet extends Cadastro {
                 let genero = this.entrada.receberTexto(`Digite o gênero do pet: `)
                 let pet = new Pet(nome, raca, genero, tipo)
                 cliente.getPets.push(pet)
+                console.log(`\nPet cadastrado com sucesso :)`)
                 atribui = true
-                console.log(`Pet cadastrado com sucesso :)\n`)
             }
         })
         if(!atribui) {
-            console.log(`CPF não encontrado`)
+            console.log(`\nCPF não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

@@ -14,16 +14,18 @@ export default class DeletaServico extends Deleta {
 
     public deletar(): void {
         let remove = false
+        console.log(`\n------------------------------`)
         let id = this.entrada.receberNumero(`Digite o ID do serviço que deseja apagar: `)
         this.servicos.forEach((servico, index) => {
             if(servico.id === id) {
                 this.servicos.splice(index, 1)
-                console.log(`Serviço deletado com sucesso\n`)
+                console.log(`\nServiço deletado com sucesso`)
                 remove = true
             }
         })
         if(!remove) {
-            console.log(`ID não encontrado\n`)
+            console.log(`\nID não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

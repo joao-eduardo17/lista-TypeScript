@@ -15,6 +15,7 @@ export default class AlteraPet extends Altera {
     
     public alterar(): void {
         let altera = false
+        console.log(`\n------------------------------`)
         let cpf = this.entrada.receberTexto(`Digite o número do CPF do cliente: `)
         this.clientes.forEach(cliente => {
             if(cliente.getCpf.getValor === cpf) {
@@ -27,14 +28,15 @@ export default class AlteraPet extends Altera {
                         let tipo = this.entrada.receberTexto(`Digite o tipo do pet: `)
                         let petNovo = new Pet(nome, raca, genero, tipo)
                         cliente.getPets.splice(index, 1, petNovo)
-                        console.log(`Pet alterado com sucesso\n`)
+                        console.log(`\nPet alterado com sucesso`)
                         altera = true
                     }
                 })
             }
         })
         if (!altera){
-            console.log(`CPF ou nome não encontrado\n`)
+            console.log(`\nCPF ou nome não encontrado`)
         }
+        console.log(`------------------------------\n`)
     }
 }

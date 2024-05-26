@@ -131,5 +131,9 @@ while (execucao) {
                     apagaServico.deletar()
                     break;
             }break;
+        case 0:
+            execucao = false
+            console.log(`\nAté mais!`)
+            break;
     }
 }

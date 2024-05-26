@@ -6,11 +6,13 @@ export default class Empresa{
     private clientes: Array<Cliente>
     private produtos: Array<Produto>
     private servicos: Array<Servico>
+
     constructor(){
         this.clientes = []
         this.produtos = []
         this.servicos = []
     }
+    
     public get getClientes(){
         return this.clientes
     }
