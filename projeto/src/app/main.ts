@@ -7,6 +7,7 @@ import AlteraServico from "../negocio/alteraServico";
 import CadastroCliente from "../negocio/cadastroCliente";
 import CadastroPet from "../negocio/cadastroPet";
 import CadastroProduto from "../negocio/cadastroProduto";
+import CadastroPSCliente from "../negocio/CadastroPSCliente";
 import CadastroServico from "../negocio/cadastroServico";
 import DeletaCliente from "../negocio/deletaCliente";
 import DeletaPet from "../negocio/deletaPet";
@@ -27,6 +28,7 @@ while (execucao) {
     console.log(`2 - Pets`);
     console.log(`3 - Produtos`)
     console.log(`4 - Serviços`) 
+    console.log(`5 - Listagens`)
     console.log(`0 - Sair`);
     let entrada = new Entrada()
     let opcao = entrada.receberNumero(`Por favor, escolha uma opção: `)
@@ -37,6 +39,7 @@ while (execucao) {
             console.log(`2 - Listar clientes`)
             console.log(`3 - Alterar cliente`)
             console.log(`4 - Deletar cliente`)
+            console.log(`5 - Vincular produtos ou serviços`)
             let opcCliente = entrada.receberNumero(`Por favor, escolha uma opção: `)
             switch(opcCliente) {
                 case 1:
@@ -54,6 +57,10 @@ while (execucao) {
                 case 4:
                     let apagaCliente = new DeletaCliente(empresa.getClientes)
                     apagaCliente.deletar()
+                    break;
+                case 5:
+                    let vinculaPSCliente = new CadastroPSCliente(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
+                    vinculaPSCliente.cadastrar()
                     break;
             }break;
         case 2:

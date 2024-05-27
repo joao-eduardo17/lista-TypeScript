@@ -1,5 +1,5 @@
 import Servico from "../modelo/servico";
-import Listagem from "./listagem";
+import Listagem from "./abstrato/listagem";
 
 export default class ListagemServicos extends Listagem {
     private servicos: Array<Servico>

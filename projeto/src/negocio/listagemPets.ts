@@ -1,5 +1,5 @@
 import Cliente from "../modelo/cliente";
-import Listagem from "./listagem";
+import Listagem from "./abstrato/listagem";
 
 export default class ListagemPets extends Listagem {
     private clientes: Array<Cliente>

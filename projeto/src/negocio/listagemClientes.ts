@@ -1,5 +1,5 @@
 import Cliente from "../modelo/cliente";
-import Listagem from "./listagem";
+import Listagem from "./abstrato/listagem";
 
 
 export default class ListagemClientes extends Listagem {
@@ -19,8 +19,24 @@ export default class ListagemClientes extends Listagem {
             console.log(`CPF: ` + cliente.getCpf.getValor);
             console.log(`RGs: ${cliente.getRgs}`);
             console.log(`Telefones: ${cliente.getTelefones}`);
-            // console.log(`Pets: ${cliente.getPets}`)
-            //Listar pets
+            if(cliente.getPets.length > 0) {
+                console.log(`Pets:`)
+                cliente.getPets.forEach(pet => {
+                    console.log(pet.getNome)
+                })
+            }
+            if(cliente.getProdutosConsumidos.length > 0) {
+                console.log(`Produtos consumidos:`)
+                cliente.getProdutosConsumidos.forEach(prduto => {
+                    console.log(prduto.nome)
+                })
+            }
+            if(cliente.getServicosConsumidos.length > 0) {
+                console.log(`Serviços consumidos:`)
+                cliente.getServicosConsumidos.forEach(servico => {
+                    console.log(servico.nome)
+                })
+            }
             console.log(`--------------------------------------`);
         });
         console.log(`\n`);

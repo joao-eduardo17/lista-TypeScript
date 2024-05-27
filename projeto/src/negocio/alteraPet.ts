@@ -1,7 +1,7 @@
 import Entrada from "../io/entrada";
 import Cliente from "../modelo/cliente";
 import Pet from "../modelo/pet";
-import Altera from "./altera";
+import Altera from "./abstrato/altera";
 
 export default class AlteraPet extends Altera {
     private clientes: Array<Cliente>

@@ -1,6 +1,6 @@
 import Entrada from "../io/entrada";
 import Servico from "../modelo/servico";
-import Altera from "./altera";
+import Altera from "./abstrato/altera";
 
 export default class AlteraServico extends Altera {
     private servicos: Array<Servico>

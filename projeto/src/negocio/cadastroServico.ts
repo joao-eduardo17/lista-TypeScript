@@ -1,6 +1,6 @@
 import Entrada from "../io/entrada";
 import Servico from "../modelo/servico";
-import Cadastro from "./cadastro";
+import Cadastro from "./abstrato/cadastro";
 
 export default class CadastroServico extends Cadastro {
     private servicos: Array<Servico>

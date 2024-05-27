@@ -2,7 +2,7 @@ import Entrada from "../io/entrada";
 import Cliente from "../modelo/cliente";
 import RG from "../modelo/rg";
 import Telefone from "../modelo/telefone";
-import Altera from "./altera";
+import Altera from "./abstrato/altera";
 
 export default class AlteraCliente extends Altera {
     private clientes: Array<Cliente>

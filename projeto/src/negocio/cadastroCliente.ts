@@ -3,7 +3,7 @@ import Cliente from "../modelo/cliente"
 import CPF from "../modelo/cpf"
 import RG from "../modelo/rg"
 import Telefone from "../modelo/telefone"
-import Cadastro from "./cadastro"
+import Cadastro from "./abstrato/cadastro"
 
 export default class CadastroCliente extends Cadastro {
     private clientes: Array<Cliente>
@@ -20,8 +20,8 @@ export default class CadastroCliente extends Cadastro {
         console.log(`Início do cadastro do cliente`);
         let nome = this.entrada.receberTexto(`Por favor informe o nome do cliente: `)
         let nomeSocial = this.entrada.receberTexto(`Por favor informe o nome social do cliente: `)
-        let valor = this.entrada.receberTexto(`Por favor informe o número do cpf: `);
-        let data = this.entrada.receberTexto(`Por favor informe a data de emissão do cpf, no padrão dd/mm/yyyy: `);
+        let valor = this.entrada.receberTexto(`Por favor informe o número do CPF: `);
+        let data = this.entrada.receberTexto(`Por favor informe a data de emissão do CPF, no padrão dd/mm/yyyy: `);
         let partesData = data.split('/')
         let ano = new Number(partesData[2].valueOf()).valueOf()
         let mes = new Number(partesData[1].valueOf()).valueOf()
@@ -29,7 +29,7 @@ export default class CadastroCliente extends Cadastro {
         let dataEmissao = new Date(ano, mes, dia)
         let cpf = new CPF(valor, dataEmissao);
         valor = this.entrada.receberTexto(`Por favor informe o número do RG: `)
-        data =  this.entrada.receberTexto(`Por favor informe a data de emissão do cpf, no padrão dd/mm/yyyy: `)
+        data =  this.entrada.receberTexto(`Por favor informe a data de emissão do RG, no padrão dd/mm/yyyy: `)
         partesData = data.split('/')
         ano = new Number(partesData[2].valueOf()).valueOf()
         mes = new Number(partesData[1].valueOf()).valueOf()
