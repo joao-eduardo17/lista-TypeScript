@@ -1,6 +1,6 @@
-import Entrada from "../io/entrada";
-import Produto from "../modelo/produto";
-import Altera from "./abstrato/altera";
+import Entrada from "../../io/entrada"
+import Produto from "../../modelo/produto"
+import Altera from "../abstrato/altera"
 
 export default class AlteraProduto extends Altera {
     private produtos: Array<Produto>

@@ -1,6 +1,6 @@
-import Entrada from "../io/entrada"
-import Cliente from "../modelo/cliente"
-import Deleta from "./abstrato/deleta"
+import Entrada from "../../io/entrada"
+import Cliente from "../../modelo/cliente"
+import Deleta from "../abstrato/deleta"
 
 export default class DeletaCliente extends Deleta {
     private clientes: Array<Cliente>

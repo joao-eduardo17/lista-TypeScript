@@ -1,8 +1,8 @@
-import Entrada from "../io/entrada";
-import Cliente from "../modelo/cliente";
-import RG from "../modelo/rg";
-import Telefone from "../modelo/telefone";
-import Altera from "./abstrato/altera";
+import Entrada from "../../io/entrada"
+import Cliente from "../../modelo/cliente"
+import RG from "../../modelo/rg"
+import Telefone from "../../modelo/telefone"
+import Altera from "../abstrato/altera"
 
 export default class AlteraCliente extends Altera {
     private clientes: Array<Cliente>
@@ -23,7 +23,6 @@ export default class AlteraCliente extends Altera {
                 let pets = [...cliente.getPets]
                 let produtos = [...cliente.getProdutosConsumidos]
                 let servicos = [...cliente.getServicosConsumidos]
-                console.log(pets)
                 let nome = this.entrada.receberTexto(`Por favor informe o nome do cliente: `)
                 let nomeSocial = this.entrada.receberTexto(`Por favor informe o nome social do cliente: `)
                 let valor = this.entrada.receberTexto(`Por favor informe o número do RG: `);

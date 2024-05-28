@@ -1,6 +1,6 @@
-import Entrada from "../io/entrada";
-import Servico from "../modelo/servico";
-import Deleta from "./abstrato/deleta";
+import Entrada from "../../io/entrada"
+import Servico from "../../modelo/servico"
+import Deleta from "../abstrato/deleta"
 
 export default class DeletaServico extends Deleta {
     private servicos: Array<Servico>

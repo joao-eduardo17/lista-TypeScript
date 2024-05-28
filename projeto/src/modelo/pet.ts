@@ -23,5 +23,5 @@ export default class Pet {
     public get getGenero(){return this.genero}
     public get getTipo(){return this.tipo}
     public get getServicosConsumidos(){return this.servicosConsumidos}
-    public get getProdutossConsumidos(){return this.produtosConsumidos}
+    public get getProdutosConsumidos(){return this.produtosConsumidos}
 }

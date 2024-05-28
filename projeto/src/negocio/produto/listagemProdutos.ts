@@ -1,5 +1,5 @@
-import Produto from "../modelo/produto";
-import Listagem from "./abstrato/listagem";
+import Produto from "../../modelo/produto"
+import Listagem from "../abstrato/listagem"
 
 export default class ListagemProdutos extends Listagem {
     private produtos: Array<Produto>

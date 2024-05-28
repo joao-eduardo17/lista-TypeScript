@@ -1,5 +1,6 @@
 import Entrada from "../io/entrada";
 import Empresa from "../modelo/empresa";
+import CadastroPSCliente from "../negocio/cadastroPSCliente";
 import AlteraCliente from "../negocio/cliente/alteraCliente";
 import CadastroCliente from "../negocio/cliente/cadastroCliente";
 import DeletaCliente from "../negocio/cliente/deletaCliente";
@@ -41,7 +42,6 @@ while (execucao) {
             console.log(`2 - Listar clientes`)
             console.log(`3 - Alterar cliente`)
             console.log(`4 - Deletar cliente`)
-            console.log(`5 - Vincular produtos ou serviços`)
             let opcCliente = entrada.receberNumero(`Por favor, escolha uma opção: `)
             switch(opcCliente) {
                 case 1:
@@ -60,10 +60,6 @@ while (execucao) {
                     let apagaCliente = new DeletaCliente(empresa.getClientes)
                     apagaCliente.deletar()
                     break;
-                // case 5:
-                //     let vinculaPSCliente = new CadastroPSCliente(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
-                //     vinculaPSCliente.cadastrar()
-                //     break;
             }break;
         case 2:
             // CRUD DOS PETS
@@ -140,6 +136,20 @@ while (execucao) {
                     apagaServico.deletar()
                     break;
             }break;
+        case 5:
+            // ADIÇÕES
+            console.log(`\n1 - Vincular produtos ou serviços ao cliente`)
+            console.log(`2 - Vincular produtos ou serviços ao pet`)
+            console.log(`3 - Adicionar Rg ou número de telefone`)
+            let opcAdicao = entrada.receberNumero(`Por favor, escolha uma opção: `)
+            switch(opcAdicao){
+                case 1:
+                    let vinculaPSCliente = new CadastroPSCliente(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
+                    vinculaPSCliente.cadastrar()
+                    break;
+                case 2:
+                    let a
+            }break;
         case 6:
             // Listagem diferenciada
             console.log(`\n1 - Clientes que mais consumiram`)
@@ -153,7 +163,7 @@ while (execucao) {
                     break;
             }break;
         case 0:
-            // execucao = false
+            execucao = false
             console.log(`\nAté mais!`)
             break;
     }
