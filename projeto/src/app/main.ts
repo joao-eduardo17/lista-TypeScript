@@ -1,22 +1,23 @@
 import Entrada from "../io/entrada";
 import Empresa from "../modelo/empresa";
-import AlteraCliente from "../negocio/alteraCliente";
-import AlteraPet from "../negocio/alteraPet";
-import AlteraProduto from "../negocio/alteraProduto";
-import AlteraServico from "../negocio/alteraServico";
-import CadastroCliente from "../negocio/cadastroCliente";
-import CadastroPet from "../negocio/cadastroPet";
-import CadastroProduto from "../negocio/cadastroProduto";
-import CadastroPSCliente from "../negocio/CadastroPSCliente";
-import CadastroServico from "../negocio/cadastroServico";
-import DeletaCliente from "../negocio/deletaCliente";
-import DeletaPet from "../negocio/deletaPet";
-import DeletaProduto from "../negocio/deletaProduto";
-import DeletaServico from "../negocio/deletaServico";
-import ListagemClientes from "../negocio/listagemClientes";
-import ListagemPets from "../negocio/listagemPets";
-import ListagemProdutos from "../negocio/listagemProdutos";
-import ListagemServicos from "../negocio/listagemServicos";
+import AlteraCliente from "../negocio/cliente/alteraCliente";
+import CadastroCliente from "../negocio/cliente/cadastroCliente";
+import DeletaCliente from "../negocio/cliente/deletaCliente";
+import ListagemClientes from "../negocio/cliente/listagemClientes";
+import ListagemClientePS from "../negocio/listagemClientePS";
+import AlteraPet from "../negocio/pet/alteraPet";
+import CadastroPet from "../negocio/pet/cadastroPet";
+import DeletaPet from "../negocio/pet/deletaPet";
+import ListagemPets from "../negocio/pet/listagemPets";
+import AlteraProduto from "../negocio/produto/alteraProduto";
+import CadastroProduto from "../negocio/produto/cadastroProduto";
+import DeletaProduto from "../negocio/produto/deletaProduto";
+import ListagemProdutos from "../negocio/produto/listagemProdutos";
+import AlteraServico from "../negocio/servico/alteraServico";
+import CadastroServico from "../negocio/servico/cadastroServico";
+import DeletaServico from "../negocio/servico/deletaServico";
+import ListagemServicos from "../negocio/servico/listagemServicos";
+
 
 console.log(`Bem-vindo ao melhor sistema de gerenciamento de pet shops e clínicas veterinarias`)
 let empresa = new Empresa()
@@ -28,7 +29,8 @@ while (execucao) {
     console.log(`2 - Pets`);
     console.log(`3 - Produtos`)
     console.log(`4 - Serviços`) 
-    console.log(`5 - Listagens`)
+    console.log(`5 - Adições`)
+    console.log(`6 - Listagens`)
     console.log(`0 - Sair`);
     let entrada = new Entrada()
     let opcao = entrada.receberNumero(`Por favor, escolha uma opção: `)
@@ -58,10 +60,10 @@ while (execucao) {
                     let apagaCliente = new DeletaCliente(empresa.getClientes)
                     apagaCliente.deletar()
                     break;
-                case 5:
-                    let vinculaPSCliente = new CadastroPSCliente(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
-                    vinculaPSCliente.cadastrar()
-                    break;
+                // case 5:
+                //     let vinculaPSCliente = new CadastroPSCliente(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
+                //     vinculaPSCliente.cadastrar()
+                //     break;
             }break;
         case 2:
             // CRUD DOS PETS
@@ -138,8 +140,20 @@ while (execucao) {
                     apagaServico.deletar()
                     break;
             }break;
+        case 6:
+            // Listagem diferenciada
+            console.log(`\n1 - Clientes que mais consumiram`)
+            console.log(`2 - Produtos ou serviços mais consumidos`)
+            console.log(`3 - Produtos ou serviços mais consumidos por tipo e raça de pet`)
+            let opcListagem = entrada.receberNumero(`Por favor, escolha uma opção: `)
+            switch(opcListagem) {
+                case 1:
+                    let listaClientePS = new ListagemClientePS(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
+                    listaClientePS.listar()
+                    break;
+            }break;
         case 0:
-            execucao = false
+            // execucao = false
             console.log(`\nAté mais!`)
             break;
     }

@@ -1,4 +1,3 @@
-import { PassThrough } from "stream";
 import Entrada from "../io/entrada";
 import Cliente from "../modelo/cliente";
 import Produto from "../modelo/produto";

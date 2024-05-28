@@ -21,6 +21,8 @@ export default class AlteraCliente extends Altera {
         this.clientes.forEach((cliente, index) => {
             if (cliente.getCpf.getValor === cpf) {
                 let pets = [...cliente.getPets]
+                let produtos = [...cliente.getProdutosConsumidos]
+                let servicos = [...cliente.getServicosConsumidos]
                 console.log(pets)
                 let nome = this.entrada.receberTexto(`Por favor informe o nome do cliente: `)
                 let nomeSocial = this.entrada.receberTexto(`Por favor informe o nome social do cliente: `)
@@ -42,6 +44,10 @@ export default class AlteraCliente extends Altera {
                 for(let c = 0; c < pets.length; c++) {
                     newCliente.getPets.push(pets[c])
                 }
+                produtos.forEach((produto) => {newCliente.getProdutosConsumidos.push(produto)})
+                servicos.forEach((servico) => {newCliente.getServicosConsumidos.push(servico)})
+
+
                 console.log(`\nCliente alterado com sucesso`)
                 altera = true
             }

@@ -33,22 +33,14 @@ export default class Cliente {
     public get getCpf(): CPF {
         return this.cpf
     }
-    public get getRgs(): Array<string> {
-        let lista: string[] = []
-        this.rgs.forEach(rg => {
-            lista.push(rg.getValor)
-        })
-        return lista
+    public get getRgs(): Array<RG> {
+        return this.rgs
     }
     public get getDataCadastro(): Date {
         return this.dataCadastro
     }
-    public get getTelefones(): Array<string> {
-        let lista: string[] = []
-        this.telefones.forEach(telefone => {
-            lista.push(telefone.getTelefone)
-        })
-        return lista
+    public get getTelefones(): Array<Telefone> {
+        return this.telefones
     }
     public get getProdutosConsumidos(): Array<Produto> {
         return this.produtosConsumidos
