@@ -1,8 +1,8 @@
-import Entrada from "../io/entrada";
-import Cliente from "../modelo/cliente";
-import Produto from "../modelo/produto";
-import Servico from "../modelo/servico";
-import Cadastro from "./abstrato/cadastro";
+import Entrada from "../../io/entrada"
+import Cliente from "../../modelo/cliente"
+import Produto from "../../modelo/produto"
+import Servico from "../../modelo/servico"
+import Cadastro from "../abstrato/cadastro"
 
 export default class CadastroPSCliente extends Cadastro {
     private clientes: Array<Cliente>

@@ -27,10 +27,10 @@ export default class ListagemClientePS extends Listagem {
                 console.log(`\n1 - Listagem por produto`)
                 console.log(`2 - Listagem por serviço`)
                 opc = this.entrada.receberNumero(`Por favor, escolha uma opção: `)
+                let nomes: Array<string> = []
+                let quantidade: Array<number> = []
                 switch(opc) {
                     case 1:
-                        let nomes: Array<string> = []
-                        let quantidade: Array<number> = []
                         this.clientes.forEach(cliente => {
                             if(cliente.getProdutosConsumidos.length > 0) {
                                 nomes.push(cliente.nome)
@@ -38,14 +38,47 @@ export default class ListagemClientePS extends Listagem {
                             }
                         })
                         if(nomes.length <= 10) {
-                            for(let c = 1; c <= nomes.length; c++){
+                            let copyNomes = [...nomes]
+                            for(let c = 1; c <= copyNomes.length; c++){
                                 let max = quantidade.reduce(function(a,b) {
                                     return Math.max(a,b)
                                 }, -Infinity)
                                 let i = quantidade.indexOf(max)
                                 console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
-                                nomes.splice(1, i)
-                                quantidade.splice(1, i)
+                                // console.log(nomes)
+                                // console.log(quantidade)
+                                nomes.splice(i, 1)
+                                quantidade.splice(i, 1)
+                            }
+                        }else {
+                            for(let c = 1; c <= 10; c++) {
+                                let max = quantidade.reduce(function(a,b) {
+                                    return Math.max(a,b)
+                                }, -Infinity)
+                                let i = quantidade.indexOf(max)
+                                console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
+                                nomes.splice(i, 1)
+                                quantidade.splice(i, 1)
+                            }
+                        }
+                        break;
+                    case 2:
+                        this.clientes.forEach(cliente => {
+                            if(cliente.getServicosConsumidos.length > 0) {
+                                nomes.push(cliente.nome)
+                                quantidade.push(cliente.getServicosConsumidos.length)
+                            }
+                        })
+                        if(nomes.length) {
+                            let copyNomes = [...nomes]
+                            for(let c = 1; c <= copyNomes.length; c++) {
+                                let max = quantidade.reduce(function(a,b) {
+                                    return Math.max(a,b)
+                                }, -Infinity)
+                                let i = quantidade.indexOf(max)
+                                console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
+                                nomes.splice(i, 1)
+                                quantidade.splice(i, 1)
                             }
                         }else {
                             for(let c = 1; c <= 10; c++) {
@@ -60,6 +93,8 @@ export default class ListagemClientePS extends Listagem {
                         }
                         break;
                 }
+                break;
+            case 2:
                 break;
         }
     }

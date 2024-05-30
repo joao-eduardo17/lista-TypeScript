@@ -41,6 +41,8 @@ export default class CadastroCliente extends Cadastro {
         numero = numero.slice(2)
         let telefone = new Telefone(ddd, numero)
         let cliente = new Cliente(nome, nomeSocial, cpf, rg, telefone);
+        let cliente2 = new Cliente("Emi", "a", new CPF("2",dataEmissao), new RG(valor, dataEmissao), new Telefone(ddd, numero))
+        this.clientes.push(cliente2)
         this.clientes.push(cliente)
         console.log(`\nCadastro concluído :)`);
         console.log(`------------------------------\n`)

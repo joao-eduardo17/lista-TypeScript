@@ -1,6 +1,8 @@
 import Entrada from "../io/entrada";
 import Empresa from "../modelo/empresa";
-import CadastroPSCliente from "../negocio/cadastroPSCliente";
+import AdicionaRgTelefone from "../negocio/adicoes/adicionaRgTelefone";
+import CadastroPSCliente from "../negocio/adicoes/cadastroPSCliente";
+import CadastroServicoPet from "../negocio/adicoes/cadastroServicoPet";
 import AlteraCliente from "../negocio/cliente/alteraCliente";
 import CadastroCliente from "../negocio/cliente/cadastroCliente";
 import DeletaCliente from "../negocio/cliente/deletaCliente";
@@ -139,7 +141,7 @@ while (execucao) {
         case 5:
             // ADIÇÕES
             console.log(`\n1 - Vincular produtos ou serviços ao cliente`)
-            console.log(`2 - Vincular produtos ou serviços ao pet`)
+            console.log(`2 - Vincular serviços ao pet`)
             console.log(`3 - Adicionar Rg ou número de telefone`)
             let opcAdicao = entrada.receberNumero(`Por favor, escolha uma opção: `)
             switch(opcAdicao){
@@ -148,7 +150,13 @@ while (execucao) {
                     vinculaPSCliente.cadastrar()
                     break;
                 case 2:
-                    let a
+                    let vinculaSPet = new CadastroServicoPet(empresa.getClientes, empresa.getServicos)
+                    vinculaSPet.cadastrar()
+                    break;
+                case 3:
+                    let adicionaRgTel = new AdicionaRgTelefone(empresa.getClientes)
+                    adicionaRgTel.cadastrar()
+                    break;
             }break;
         case 6:
             // Listagem diferenciada
