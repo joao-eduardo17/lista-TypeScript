@@ -5,7 +5,7 @@
 - [X] CRUD de produtos e serviços
 - [X] Registro de consumo dos produtos ou serviços que cada cliente adquiriu
 - [X] Listagem dos 10 clientes que mais consumiram produtos ou serviços, em quantidade, não em valor
-- [ ] Listagem geral dos serviços ou produtos mais consumidos
+- [X] Listagem geral dos serviços ou produtos mais consumidos
 - [ ] Listagem dos serviços ou produtos mais consumidos por tipo e raça de pets
 - [ ] Listagem dos 5 clientes que mais consumiram em valor, não em quantidade
 
