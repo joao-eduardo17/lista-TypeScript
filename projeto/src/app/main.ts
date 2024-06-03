@@ -2,12 +2,13 @@ import Entrada from "../io/entrada";
 import Empresa from "../modelo/empresa";
 import AdicionaRgTelefone from "../negocio/adicoes/adicionaRgTelefone";
 import CadastroPSCliente from "../negocio/adicoes/cadastroPSCliente";
-import CadastroServicoPet from "../negocio/adicoes/cadastroServicoPet";
+import CadastroPSPet from "../negocio/adicoes/cadastroPSPet";
 import AlteraCliente from "../negocio/cliente/alteraCliente";
 import CadastroCliente from "../negocio/cliente/cadastroCliente";
 import DeletaCliente from "../negocio/cliente/deletaCliente";
 import ListagemClientes from "../negocio/cliente/listagemClientes";
-import ListagemClientePS from "../negocio/listagemClientePS";
+import ListagemClientePS from "../negocio/listagens especiais/listagemClientePS";
+import ListagemPS from "../negocio/listagens especiais/listagemPS";
 import AlteraPet from "../negocio/pet/alteraPet";
 import CadastroPet from "../negocio/pet/cadastroPet";
 import DeletaPet from "../negocio/pet/deletaPet";
@@ -150,8 +151,8 @@ while (execucao) {
                     vinculaPSCliente.cadastrar()
                     break;
                 case 2:
-                    let vinculaSPet = new CadastroServicoPet(empresa.getClientes, empresa.getServicos)
-                    vinculaSPet.cadastrar()
+                    let vinculaPSPet = new CadastroPSPet(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
+                    vinculaPSPet.cadastrar()
                     break;
                 case 3:
                     let adicionaRgTel = new AdicionaRgTelefone(empresa.getClientes)
@@ -169,10 +170,14 @@ while (execucao) {
                     let listaClientePS = new ListagemClientePS(empresa.getClientes, empresa.getProdutos, empresa.getServicos)
                     listaClientePS.listar()
                     break;
+                case 2:
+                    let listaPS = new ListagemPS(empresa.getClientes)
+                    listaPS.listar()
+                    break;
             }break;
         case 0:
-            execucao = false
-            console.log(`\nAté mais!`)
-            break;
+            // execucao = false
+            // console.log(`\nAté mais!`)
+            // break;
     }
 }
