@@ -9,6 +9,7 @@ import DeletaCliente from "../negocio/cliente/deletaCliente";
 import ListagemClientes from "../negocio/cliente/listagemClientes";
 import ListagemClientePS from "../negocio/listagens especiais/listagemClientePS";
 import ListagemPS from "../negocio/listagens especiais/listagemPS";
+import ListagemPSPet from "../negocio/listagens especiais/listagemPSPet";
 import AlteraPet from "../negocio/pet/alteraPet";
 import CadastroPet from "../negocio/pet/cadastroPet";
 import DeletaPet from "../negocio/pet/deletaPet";
@@ -142,7 +143,7 @@ while (execucao) {
         case 5:
             // ADIÇÕES
             console.log(`\n1 - Vincular produtos ou serviços ao cliente`)
-            console.log(`2 - Vincular serviços ao pet`)
+            console.log(`2 - Vincular produtos ou serviços ao pet`)
             console.log(`3 - Adicionar Rg ou número de telefone`)
             let opcAdicao = entrada.receberNumero(`Por favor, escolha uma opção: `)
             switch(opcAdicao){
@@ -174,10 +175,16 @@ while (execucao) {
                     let listaPS = new ListagemPS(empresa.getClientes)
                     listaPS.listar()
                     break;
+                case 3:
+                    let listaPSPet = new ListagemPSPet(empresa.getClientes)
+                    listaPSPet.listar()
+                    break;
             }break;
         case 0:
             // execucao = false
             // console.log(`\nAté mais!`)
             // break;
+        default:
+            console.log(`Operação não correspondida :(\n`)
     }
 }

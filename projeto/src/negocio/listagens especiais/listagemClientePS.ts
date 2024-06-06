@@ -17,6 +17,41 @@ export default class ListagemClientePS extends Listagem {
         this.entrada = new Entrada()
     }
 
+    public listaProdutoQuantidade(): void {
+        let nomes: Array<string> = []
+        let quantidade: Array<number> = []
+        this.clientes.forEach(cliente => {
+            if(cliente.getProdutosConsumidos.length > 0) {
+                nomes.push(cliente.nome)
+                quantidade.push(cliente.getProdutosConsumidos.length)
+            }
+        })
+        if(nomes.length <= 10) {
+            let copyNomes = [...nomes]
+            for(let c = 1; c <= copyNomes.length; c++){
+                let max = quantidade.reduce(function(a,b) {
+                    return Math.max(a,b)
+                }, -Infinity)
+                let i = quantidade.indexOf(max)
+                console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
+                // console.log(nomes)
+                // console.log(quantidade)
+                nomes.splice(i, 1)
+                quantidade.splice(i, 1)
+            }
+        }else {
+            for(let c = 1; c <= 10; c++) {
+                let max = quantidade.reduce(function(a,b) {
+                    return Math.max(a,b)
+                }, -Infinity)
+                let i = quantidade.indexOf(max)
+                console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
+                nomes.splice(i, 1)
+                quantidade.splice(i, 1)
+            }
+        }
+    }
+
     public listar(): void {
         console.log(`\n------------------------------`)
         console.log(`1 - Quantidade`) // 10
@@ -31,36 +66,37 @@ export default class ListagemClientePS extends Listagem {
                 let quantidade: Array<number> = []
                 switch(opc) {
                     case 1:
-                        this.clientes.forEach(cliente => {
-                            if(cliente.getProdutosConsumidos.length > 0) {
-                                nomes.push(cliente.nome)
-                                quantidade.push(cliente.getProdutosConsumidos.length)
-                            }
-                        })
-                        if(nomes.length <= 10) {
-                            let copyNomes = [...nomes]
-                            for(let c = 1; c <= copyNomes.length; c++){
-                                let max = quantidade.reduce(function(a,b) {
-                                    return Math.max(a,b)
-                                }, -Infinity)
-                                let i = quantidade.indexOf(max)
-                                console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
-                                // console.log(nomes)
-                                // console.log(quantidade)
-                                nomes.splice(i, 1)
-                                quantidade.splice(i, 1)
-                            }
-                        }else {
-                            for(let c = 1; c <= 10; c++) {
-                                let max = quantidade.reduce(function(a,b) {
-                                    return Math.max(a,b)
-                                }, -Infinity)
-                                let i = quantidade.indexOf(max)
-                                console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
-                                nomes.splice(i, 1)
-                                quantidade.splice(i, 1)
-                            }
-                        }
+                        this.listaProdutoQuantidade()
+                        // this.clientes.forEach(cliente => {
+                        //     if(cliente.getProdutosConsumidos.length > 0) {
+                        //         nomes.push(cliente.nome)
+                        //         quantidade.push(cliente.getProdutosConsumidos.length)
+                        //     }
+                        // })
+                        // if(nomes.length <= 10) {
+                        //     let copyNomes = [...nomes]
+                        //     for(let c = 1; c <= copyNomes.length; c++){
+                        //         let max = quantidade.reduce(function(a,b) {
+                        //             return Math.max(a,b)
+                        //         }, -Infinity)
+                        //         let i = quantidade.indexOf(max)
+                        //         console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
+                        //         // console.log(nomes)
+                        //         // console.log(quantidade)
+                        //         nomes.splice(i, 1)
+                        //         quantidade.splice(i, 1)
+                        //     }
+                        // }else {
+                        //     for(let c = 1; c <= 10; c++) {
+                        //         let max = quantidade.reduce(function(a,b) {
+                        //             return Math.max(a,b)
+                        //         }, -Infinity)
+                        //         let i = quantidade.indexOf(max)
+                        //         console.log(`${c} - ${nomes[i]}: ${quantidade[i]}`)
+                        //         nomes.splice(i, 1)
+                        //         quantidade.splice(i, 1)
+                        //     }
+                        // }
                         break;
                     case 2:
                         this.clientes.forEach(cliente => {

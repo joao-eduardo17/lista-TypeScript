@@ -14,8 +14,8 @@ export default class Pet {
         this.raca = raca
         this.genero = genero
         this.tipo = tipo
+        this.produtosConsumidos = [new Produto(1, "banho", 11)]
         this.servicosConsumidos = []
-        this.produtosConsumidos = []
     }
 
     public get getNome(){return this.nome}
