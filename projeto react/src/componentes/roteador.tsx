@@ -3,6 +3,7 @@ import BarraNavegacao from "./barraNavegacao";
 import ListaCliente from "./listaClientes";
 // import FormularioCadastroCliente from "./formularioCadastroCliente";
 import Homepage from "./homepage";
+import Clientes from "./clientes";
 
 type state = {
     tela: string
@@ -31,7 +32,7 @@ export default class Roteador extends Component<{}, state>{
             return (
                 <>
                     {barraNavegacao}
-                    <ListaCliente tema="#e3f2fd" />
+                    <Clientes />
                 </>
             )
         }if(this.state.tela === 'Home') {
