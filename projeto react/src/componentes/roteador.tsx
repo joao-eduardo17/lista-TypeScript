@@ -1,9 +1,10 @@
 import { Component } from "react";
 import BarraNavegacao from "./barraNavegacao";
-import ListaCliente from "./listaClientes";
+// import ListaCliente from "./listaClientes";
 // import FormularioCadastroCliente from "./formularioCadastroCliente";
 import Homepage from "./homepage";
 import Clientes from "./clientes";
+import Pets from "./pets";
 
 type state = {
     tela: string
@@ -40,6 +41,13 @@ export default class Roteador extends Component<{}, state>{
                 <>
                     {barraNavegacao}
                     <Homepage />
+                </>
+            )
+        }if(this.state.tela === 'Pets') {
+            return(
+                <>
+                    {barraNavegacao}
+                    <Pets />
                 </>
             )
         }

@@ -1,16 +1,35 @@
 import { Component } from "react";
-import FormularioCadastroCliente from "./formularioCadastroCliente";
+import FormularioCadastroCliente from "./cliente/formularioCadastroCliente";
+import ListaCliente from "./cliente/listaClientes";
+import AlteraClientes from "./cliente/alteraClientes";
+import DeletarClientes from "./cliente/deletarClientes";
 
 export default class Clientes extends Component {
     render() {
-        const styleH1 = {
-            paddingLeft: "1rem",
-            // color: "red"
+        const div = {
+            marginLeft: "1rem"
         }
         return(
             <>
-                <h1 style={styleH1}>Cadastro</h1>
-                <FormularioCadastroCliente tema="#e3f2fd" />
+                <main style={div}>
+                    <h1>Cadastro</h1>
+                    <FormularioCadastroCliente tema="#e3f2fd" />
+
+                    <hr/>
+
+                    <h1>Listagem</h1>
+                    <ListaCliente tema=""/>
+
+                    <hr/>
+
+                    <h1>Alteração</h1>
+                    <AlteraClientes tema="#e3f2fd" />
+
+                    <hr/>
+
+                    <h1>Deletar</h1>
+                    <DeletarClientes tema="#e3f2fd" />
+                </main>
             </>
         );
     }

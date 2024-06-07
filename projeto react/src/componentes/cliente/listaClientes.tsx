@@ -7,7 +7,11 @@ type props = {
 
 export default class ListaCliente extends Component<props>{
     render() {
+
+        // STYLES
         let tema = this.props.tema
+        
+
         return (
             <div className="container-fluid">
                 <div className="list-group">
