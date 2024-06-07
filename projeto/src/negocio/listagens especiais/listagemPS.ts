@@ -94,5 +94,6 @@ export default class ListagemPS extends Listagem {
                 }
                 break;
         }
+        console.log(`------------------------------\n`)
     }
 }

@@ -233,5 +233,6 @@ export default class ListagemPSPet extends Listagem {
                 }
                 break;
         }
+        console.log(`------------------------------\n`)
     }
 }
