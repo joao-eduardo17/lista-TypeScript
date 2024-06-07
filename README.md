@@ -7,7 +7,7 @@
 - [X] Listagem dos 10 clientes que mais consumiram produtos ou serviços, em quantidade, não em valor
 - [X] Listagem geral dos serviços ou produtos mais consumidos
 - [X] Listagem dos serviços ou produtos mais consumidos por tipo e raça de pets
-- [ ] Listagem dos 5 clientes que mais consumiram em valor, não em quantidade
+- [X] Listagem dos 5 clientes que mais consumiram em valor, não em quantidade
 
 ## Tecnologias Utilizadas
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
