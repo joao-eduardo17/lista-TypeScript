@@ -1,2 +1,4 @@
-# lista-TypeScript
-Este repositório é destinado a produção das listas do Professor Gerson
+# Lista II
+
+## Objetivo
+- [ ] Criar o Frontend
