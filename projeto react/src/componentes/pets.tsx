@@ -13,22 +13,22 @@ export default class Pets extends Component {
         return(
             <>
                 <main style={div}>
-                    <h1>Cadastro</h1>
+                    <h2>Cadastro</h2>
                     <FormularioCadastroPet tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Listagem</h1>
+                    <h2>Listagem</h2>
                     <ListaPets tema="" />
 
                     <hr/>
 
-                    <h1>Alteração</h1>
+                    <h2>Alteração</h2>
                     <AlteraPets tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Deletar</h1>
+                    <h2>Deletar</h2>
                     <DeletarPets tema="#e3f2fd" />
                 </main>
             </>

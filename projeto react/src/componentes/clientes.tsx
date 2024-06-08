@@ -12,22 +12,22 @@ export default class Clientes extends Component {
         return(
             <>
                 <main style={div}>
-                    <h1>Cadastro</h1>
+                    <h2>Cadastro</h2>
                     <FormularioCadastroCliente tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Listagem</h1>
+                    <h2>Listagem</h2>
                     <ListaCliente tema=""/>
 
                     <hr/>
 
-                    <h1>Alteração</h1>
+                    <h2>Alteração</h2>
                     <AlteraClientes tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Deletar</h1>
+                    <h2>Deletar</h2>
                     <DeletarClientes tema="#e3f2fd" />
                 </main>
             </>

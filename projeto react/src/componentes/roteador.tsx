@@ -6,6 +6,7 @@ import Pets from "./pets";
 import Produtos from "./produtos";
 import Servicos from "./servicos";
 import Adicao from "./adicao";
+import Listagem from "./listagem";
 
 type state = {
     tela: string
@@ -72,11 +73,11 @@ export default class Roteador extends Component<{}, state>{
                     <Adicao />
                 </>
             )
-        }if(this.state.tela === 'Listagens'){
+        }else {
             return(
                 <>
                     {barraNavegacao}
-                    {/* <Listagens /> */}
+                    <Listagem />
                 </>
             )
         }

@@ -13,22 +13,22 @@ export default class Servicos extends Component {
         return(
             <>
                 <main style={div}>
-                    <h1>Cadastro</h1>
+                    <h2>Cadastro</h2>
                     <FormularioCadastroServico tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Listagem</h1>
+                    <h2>Listagem</h2>
                     <ListaServicos tema="" />
 
                     <hr/>
 
-                    <h1>Alteração</h1>
+                    <h2>Alteração</h2>
                     <AlteraServicos tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Deletar</h1>
+                    <h2>Deletar</h2>
                     <DeletarServicos tema="#e3f2fd" />
                 </main>
             </>

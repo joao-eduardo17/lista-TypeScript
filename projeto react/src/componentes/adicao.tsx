@@ -11,17 +11,17 @@ export default class Adicao extends Component {
         return(
             <>
                 <main style={div}>
-                    <h1>Vincular produto e servico ao cliente</h1>
+                    <h2>Vincular produto e servico ao cliente</h2>
                     <FormPSCliente tema="#e3f2fd"/>
 
                     <hr/>
 
-                    <h1>Vincular produto e servico ao pet</h1>
+                    <h2>Vincular produto e servico ao pet</h2>
                     <FormPSPet tema="#e3f2fd"/>
 
                     <hr/>
 
-                    <h1>Vincular RG e Telefone</h1>
+                    <h2>Vincular RG e Telefone</h2>
                     <FormRgTel tema="#e3f2fd" />
                 </main>
             </>

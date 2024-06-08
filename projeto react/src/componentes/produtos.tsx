@@ -13,22 +13,22 @@ export default class Produtos extends Component {
         return(
             <>
                 <main style={div}>
-                    <h1>Cadastro</h1>
+                    <h2>Cadastro</h2>
                     <FormularioCadastroProduto tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Listagem</h1>
+                    <h2>Listagem</h2>
                     <ListaProdutos tema="" />
 
                     <hr/>
 
-                    <h1>Alteração</h1>
+                    <h2>Alteração</h2>
                     <AlteraProdutos tema="#e3f2fd" />
 
                     <hr/>
 
-                    <h1>Deletar</h1>
+                    <h2>Deletar</h2>
                     <DeletarProdutos tema="#e3f2fd" />
                 </main>
             </>
