@@ -6,8 +6,8 @@ Este repositório é destinado a produção das listas do Professor Gerson
 |Número|Status|Local|
 |------|------|-----|
 |I|✔️ Concluída|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-I)|
-|II|⌚Em andamento|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-II)|
-|III|Não iniciado|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-III)|
+|II|✔️ Concluída|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-II)|
+|III|⌚Em andamento|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-III)|
 |IV|Não iniciado|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-IV)|
 |V|Não iniciado|[Branch](https://github.com/joao-eduardo17/lista-TypeScript/tree/atv-V)|
 
