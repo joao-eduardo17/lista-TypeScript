@@ -1,10 +1,11 @@
 import { Component } from "react";
 import BarraNavegacao from "./barraNavegacao";
-// import ListaCliente from "./listaClientes";
-// import FormularioCadastroCliente from "./formularioCadastroCliente";
 import Homepage from "./homepage";
 import Clientes from "./clientes";
 import Pets from "./pets";
+import Produtos from "./produtos";
+import Servicos from "./servicos";
+import Adicao from "./adicao";
 
 type state = {
     tela: string
@@ -28,7 +29,7 @@ export default class Roteador extends Component<{}, state>{
     }
 
     render() {
-        let barraNavegacao = <BarraNavegacao seletorView={this.selecionarView} tema="#e3f2fd" botoes={['Home', 'Clientes', 'Pets', 'Produtos', 'Servicos', 'Adições', 'Listagens']} />
+        let barraNavegacao = <BarraNavegacao seletorView={this.selecionarView} tema="#e3f2fd" botoes={['Home', 'Clientes', 'Pets', 'Produtos', 'Serviços', 'Adições', 'Listagens']} />
         if(this.state.tela === 'Clientes') {
             return (
                 <>
@@ -48,6 +49,34 @@ export default class Roteador extends Component<{}, state>{
                 <>
                     {barraNavegacao}
                     <Pets />
+                </>
+            )
+        }if(this.state.tela === 'Produtos') {
+            return(
+                <>
+                    {barraNavegacao}
+                    <Produtos />
+                </>
+            )
+        }if(this.state.tela === 'Serviços') {
+            return(
+                <>
+                    {barraNavegacao}
+                    <Servicos />
+                </>
+            )
+        }if(this.state.tela === 'Adições') {
+            return(
+                <>
+                    {barraNavegacao}
+                    <Adicao />
+                </>
+            )
+        }if(this.state.tela === 'Listagens'){
+            return(
+                <>
+                    {barraNavegacao}
+                    {/* <Listagens /> */}
                 </>
             )
         }
