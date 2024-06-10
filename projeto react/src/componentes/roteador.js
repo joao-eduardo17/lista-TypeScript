@@ -5,6 +5,7 @@ import ListaCliente from "./cliente/listaCliente";
 import FormularioCadastroCliente from "./cliente/formularioCadastroCliente";
 import Homepage from "./homepage";
 import Clientes from "./clientes";
+import Pets from "./pets";
 
 export default function Roteador() {
     const [tela, setTela] = useState('Home')
@@ -20,7 +21,7 @@ export default function Roteador() {
             return (
                 <>
                     {navBar}
-                    <Clientes tema="#e3f2fd" />
+                    <Clientes />
                 </>
             )
         }if(tela === 'Home') {
@@ -30,8 +31,18 @@ export default function Roteador() {
                     <Homepage />
                 </>
             )
-        }if(tela === 'Pet') {
-
+        }if(tela === 'Pets') {
+            return(
+                <>
+                    {navBar}
+                    <Pets />
+                </>
+            )
+        }if(tela === 'Produtos') {
+            return(
+                <>
+                </>
+            )
         }
     }
 
