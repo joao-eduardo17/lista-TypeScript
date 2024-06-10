@@ -8,6 +8,7 @@ import Clientes from "./clientes";
 import Pets from "./pets";
 import Produtos from "./produtos";
 import Servicos from "./servicos";
+import Adicao from "./adicao";
 
 export default function Roteador() {
     const [tela, setTela] = useState('Home')
@@ -52,6 +53,13 @@ export default function Roteador() {
                 <>
                     {navBar}
                     <Servicos />
+                </>
+            )
+        }if(tela === 'Adições') {
+            return(
+                <>
+                    {navBar}
+                    <Adicao />
                 </>
             )
         }
