@@ -7,6 +7,7 @@ import Homepage from "./homepage";
 import Clientes from "./clientes";
 import Pets from "./pets";
 import Produtos from "./produtos";
+import Servicos from "./servicos";
 
 export default function Roteador() {
     const [tela, setTela] = useState('Home')
@@ -46,11 +47,17 @@ export default function Roteador() {
                     <Produtos />
                 </>
             )
+        }if(tela === 'Serviços') {
+            return(
+                <>
+                    {navBar}
+                    <Servicos />
+                </>
+            )
         }
     }
 
     return (
-        // console.log(1),
         construirView()
     )
 }
