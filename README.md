@@ -1,13 +1,13 @@
 # Lista III
 
 ## Objetivo
-- [ ] Criar o componente Home
-- [ ] Criar o componente Ciente
-- [ ] Criar o componente Pet
-- [ ] Criar o componente Produto
-- [ ] Criar o componente Serviço
-- [ ] Criar o componente Adições
-- [ ] Criar o componente Listagens
+- [X] Criar o componente Home
+- [X] Criar o componente Ciente
+- [X] Criar o componente Pet
+- [X] Criar o componente Produto
+- [X] Criar o componente Serviço
+- [X] Criar o componente Adições
+- [X] Criar o componente Listagens
 
 ## Tecnologias Utilizadas
 ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
