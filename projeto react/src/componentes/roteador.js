@@ -6,6 +6,7 @@ import FormularioCadastroCliente from "./cliente/formularioCadastroCliente";
 import Homepage from "./homepage";
 import Clientes from "./clientes";
 import Pets from "./pets";
+import Produtos from "./produtos";
 
 export default function Roteador() {
     const [tela, setTela] = useState('Home')
@@ -41,6 +42,8 @@ export default function Roteador() {
         }if(tela === 'Produtos') {
             return(
                 <>
+                    {navBar}
+                    <Produtos />
                 </>
             )
         }
