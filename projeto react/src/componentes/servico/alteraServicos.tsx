@@ -12,7 +12,7 @@ export default class AlteraServicos extends Component<props> {
             <>
                 <main>
                     <div className="input-group mb-3">
-                        <input type="text" className="form-control" placeholder="ID do produto" aria-label="CPF" aria-describedby="basic-addon1" />
+                        <input type="text" className="form-control" placeholder="ID do serviço" aria-label="CPF" aria-describedby="basic-addon1" />
                     </div>
                     <div className="input-group mb-3">
                         <div className="input-group-text">
