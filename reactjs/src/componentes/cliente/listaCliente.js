@@ -30,7 +30,7 @@ export default function ListaCliente(props) {
         <div className="container-fluid">
             <div className="list-group">
                 {clientes.map((cliente, index) => (
-                    <a href="#" className="list-group-item list-group-item-action">ID: {cliente.id} | {cliente.nome}</a>
+                    <a href="#" className="list-group-item list-group-item-action">ID: {cliente.id} | {cliente.nome} | {cliente.email}</a>
                 ))}
                 {/* <a href="#" className="list-group-item list-group-item-action">Cliente 2</a>
                 <a href="#" className="list-group-item list-group-item-action">Cliente 3</a>
